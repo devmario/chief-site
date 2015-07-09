@@ -9,7 +9,9 @@ fn main() {
     server.utilize(StaticFilesHandler::new("statics"));
 
     server.get("/", middleware! { |_, res|
-        format!("root {} {}", 0, 1);
+        let mut data = HashMap::new();
+        data.insert("name", "root");
+        return res.render("assets/template.tpl", &data);
     });
 
     server.get("/get/:name", middleware! { |req, res|
