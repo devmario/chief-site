@@ -1,7 +1,0 @@
-[package]
-name = "chief-site"
-version = "0.1.0"
-authors = ["ubuntu"]
-
-[dependencies]
-nickel = "*"
